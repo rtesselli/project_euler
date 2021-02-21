@@ -12,3 +12,5 @@ from .problem11 import problem11
 from .problem12 import problem12
 from .problem13 import problem13
 from .problem14 import problem14
+from .problem15 import problem15
+from .problem16 import problem16
