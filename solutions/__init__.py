@@ -15,3 +15,4 @@ from .problem14 import problem14
 from .problem15 import problem15
 from .problem16 import problem16
 from .problem17 import problem17
+from .problem18 import problem18
