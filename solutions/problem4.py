@@ -13,5 +13,5 @@ def problem4():
             a * b
             for a in range(100, 1000)
             for b in range(a, 1000)
-            if is_palindrome(str(a * b)))
+            if a * b % 11 == 0 and is_palindrome(str(a * b)))  # guess max is 6-digits long
     )
