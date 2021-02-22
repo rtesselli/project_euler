@@ -6,9 +6,7 @@ def fibonacci():
     current = 1
     while True:
         yield current
-        current_tmp = current
-        current = last + current
-        last = current_tmp
+        last, current = current, last + current
 
 
 def triangle_numbers():
