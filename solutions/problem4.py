@@ -13,5 +13,5 @@ def problem4():
             a * b
             for a in range(100, 1000)
             for b in range(a, 1000)
-            if (a % 11 == 0 or b % 11 == 0) and is_palindrome(str(a * b)))
+            if is_palindrome(str(a * b)))
     )
