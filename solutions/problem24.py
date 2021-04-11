@@ -11,4 +11,5 @@ from itertools import permutations
 
 
 def problem24():
-    return "".join(sorted(permutations(set([str(i) for i in range(10)])))[1000000 - 1])
+    digits = (str(i) for i in range(10))
+    return "".join(sorted(permutations(digits))[1000000 - 1])
