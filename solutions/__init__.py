@@ -19,4 +19,5 @@ from .problem18 import problem18
 from .problem19 import problem19
 from .problem20 import problem20
 from .problem24 import problem24
+from .problem28 import problem28
 from .problem700 import problem700
