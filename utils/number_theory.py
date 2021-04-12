@@ -109,3 +109,7 @@ def mult_inverse(n, p):
 def ring_sequence(g, p):
     for i in range(1, p):
         yield (g * i) % p
+
+
+def n_combinations(n, r):
+    return int(math.factorial(n) / (math.factorial(r) * math.factorial(n - r)))
