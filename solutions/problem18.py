@@ -33,6 +33,15 @@ brute force, and requires a clever method! ;o)
 """
 
 
+def solve(lines):
+    numbers = [{'pos': i + 1, 'value': int(number)} for i, numbers in enumerate(lines) for number in numbers.split()]
+    for i, number in enumerate(reversed(numbers)):
+        i = len(numbers) - i - 1
+        if i + number['pos'] < len(numbers) and i + number['pos'] + 1 < len(numbers):
+            number['value'] += max(numbers[i + number['pos']]['value'], numbers[i + number['pos'] + 1]['value'])
+    return numbers[0]['value']
+
+
 def problem18():
     text = """
 75
@@ -52,9 +61,4 @@ def problem18():
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23    
     """
     lines = text.splitlines()[1:]
-    numbers = [{'pos': i + 1, 'value': int(number)} for i, numbers in enumerate(lines) for number in numbers.split()]
-    for i, number in enumerate(reversed(numbers)):
-        i = len(numbers) - i - 1
-        if i + number['pos'] < len(numbers) and i + number['pos'] + 1 < len(numbers):
-            number['value'] += max(numbers[i + number['pos']]['value'], numbers[i + number['pos'] + 1]['value'])
-    return numbers[0]['value']
+    return solve(lines)

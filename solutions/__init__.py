@@ -23,4 +23,5 @@ from .problem24 import problem24
 from .problem25 import problem25
 from .problem26 import problem26
 from .problem28 import problem28
+from .problem67 import problem67
 from .problem700 import problem700
