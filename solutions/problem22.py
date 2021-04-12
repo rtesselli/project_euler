@@ -12,7 +12,7 @@ What is the total of all the name scores in the file?
 
 
 def load_file():
-    with open('./data/names.txt', 'r') as f:
+    with open('./data/p022_names.txt', 'r') as f:
         names = f.readlines()
     names = names[0].split('","')
     names[0] = names[0][1:]
