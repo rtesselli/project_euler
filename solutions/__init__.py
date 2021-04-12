@@ -26,6 +26,8 @@ from .problem28 import problem28
 from .problem29 import problem29
 from .problem30 import problem30
 from .problem34 import problem34
+from .problem36 import problem36
 from .problem48 import problem48
+from .problem52 import problem52
 from .problem67 import problem67
 from .problem700 import problem700
