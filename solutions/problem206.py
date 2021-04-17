@@ -4,7 +4,6 @@ where each “_” is a single digit.
 """
 
 import math
-from tqdm import tqdm
 
 
 def check(n):
@@ -16,4 +15,4 @@ def check(n):
 def problem206():
     min_v = math.ceil(math.sqrt(1020304050607080900))
     max_v = math.floor(math.sqrt(1929394959697989990))
-    return list(filter(check, tqdm(range(min_v, max_v))))[0]
+    return next(n for n in reversed(range(min_v, max_v)) if check(n))
