@@ -112,4 +112,4 @@ def ring_sequence(g, p):
 
 
 def n_combinations(n, r):
-    return int(math.factorial(n) / (math.factorial(r) * math.factorial(n - r)))
+    return math.factorial(n) // (math.factorial(r) * math.factorial(n - r))
