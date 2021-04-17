@@ -80,7 +80,8 @@ def prime_decomp(n):
     return exponents
 
 
-def n_divisors(primes):
+def n_divisors(n):
+    primes = prime_decomp(n)
     exponents = np.array(list(primes.values()))
     exponents += 1
     return np.prod(exponents)

@@ -23,5 +23,5 @@ from utils.number_theory import n_divisors, prime_decomp
 
 def problem12():
     for i, triangle in enumerate(triangle_numbers()):
-        if n_divisors(prime_decomp(triangle)) > 500:
+        if n_divisors(triangle) > 500:
             return triangle
