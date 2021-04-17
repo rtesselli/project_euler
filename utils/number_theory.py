@@ -124,3 +124,12 @@ def ring_sequence(g, p):
 
 def n_combinations(n, r):
     return math.factorial(n) // (math.factorial(r) * math.factorial(n - r))
+
+
+def amicable(n):
+    if n <= 1:
+        return False
+    proper_divisors = set(divisors(n)) - {n}
+    other = sum(proper_divisors)
+    proper_divisors_other = set(divisors(other)) - {other}
+    return (sum(proper_divisors_other) == n) and (n != other)

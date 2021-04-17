@@ -9,16 +9,7 @@ The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
 Evaluate the sum of all the amicable numbers under 10000.
 """
 
-from utils.number_theory import divisors
-
-
-def amicable(n):
-    if n <= 1:
-        return False
-    proper_divisors = set(divisors(n)) - {n}
-    other = sum(proper_divisors)
-    proper_divisors_other = set(divisors(other)) - {other}
-    return (sum(proper_divisors_other) == n) and (n != other)
+from utils.number_theory import amicable
 
 
 def problem21():
