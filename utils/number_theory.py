@@ -1,6 +1,7 @@
 import math
 import sympy
 import numpy as np
+import itertools
 from collections import defaultdict
 
 
@@ -82,9 +83,18 @@ def prime_decomp(n):
 
 def n_divisors(n):
     primes = prime_decomp(n)
-    exponents = np.array(list(primes.values()))
-    exponents += 1
+    exponents = np.array(list(primes.values())) + 1
     return np.prod(exponents)
+
+
+def divisors(n):
+    primes = prime_decomp(n)
+    exponents = np.array(list(primes.values())) + 1
+    exponents = (range(exponent) for exponent in exponents)
+    return (
+        np.prod(np.power(list(primes.keys()), combination))
+        for combination in itertools.product(*exponents)
+    )
 
 
 def gcd_extended(a, b):
