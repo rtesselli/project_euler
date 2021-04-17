@@ -37,4 +37,5 @@ from .problem76 import problem76
 from .problem81 import problem81
 from .problem99 import problem99
 from .problem206 import problem206
+from .problem345 import problem345
 from .problem700 import problem700
