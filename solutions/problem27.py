@@ -25,7 +25,8 @@ def count_primes(f):
 
 
 def problem27():
+    primes = number_theory.sieve_of_atkin(1001)
     len_primes = ((count_primes(generate_f(a, b)), a, b)
-                  for a in range(-999, 1001) for b in range(-999, 1001))
+                  for a in range(-999, 1001, 2) for b in primes)
     v, a, b = max(len_primes, key=itemgetter(0))
     return a * b
