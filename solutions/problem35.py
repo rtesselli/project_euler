@@ -7,9 +7,8 @@ How many circular primes are there below one million?
 """
 
 from utils.number_theory import sieve_of_atkin
-from tqdm import tqdm
 
-primes = sieve_of_atkin(int(1e6))
+primes = set(sieve_of_atkin(int(1e6)))
 
 
 def is_prime(n):
@@ -34,6 +33,6 @@ def is_circular_prime(n):
 def problem35():
     return len([
         p
-        for p in tqdm(primes)
+        for p in primes
         if is_circular_prime(p)
     ])
