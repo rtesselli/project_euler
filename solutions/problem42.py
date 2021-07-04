@@ -15,9 +15,9 @@ from utils.series import triangle_numbers
 
 
 def gen_triangulars(n):
-    triangulars = []
+    triangulars = set()
     for i, t in enumerate(triangle_numbers()):
-        triangulars.append(t)
+        triangulars.add(t)
         if i == n:
             break
     return triangulars
