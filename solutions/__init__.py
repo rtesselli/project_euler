@@ -35,6 +35,7 @@ from .problem36 import problem36
 from .problem38 import problem38
 from .problem39 import problem39
 from .problem40 import problem40
+from .problem42 import problem42
 from .problem43 import problem43
 from .problem48 import problem48
 from .problem52 import problem52
