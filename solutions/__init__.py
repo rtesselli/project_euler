@@ -29,6 +29,7 @@ from .problem28 import problem28
 from .problem29 import problem29
 from .problem30 import problem30
 from .problem31 import problem31
+from .problem32 import problem32
 from .problem33 import problem33
 from .problem34 import problem34
 from .problem35 import problem35
