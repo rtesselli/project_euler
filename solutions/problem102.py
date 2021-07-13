@@ -55,7 +55,3 @@ def contains_origin(triangle):
 def problem102():
     triangles = read_data()
     return sum(contains_origin(triangle) for triangle in triangles)
-
-
-if __name__ == '__main__':
-    print(problem102())
