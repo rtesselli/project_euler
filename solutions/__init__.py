@@ -54,4 +54,5 @@ from .problem102 import problem102
 from .problem205 import problem205
 from .problem206 import problem206
 from .problem345 import problem345
+from .problem493 import problem493
 from .problem700 import problem700
