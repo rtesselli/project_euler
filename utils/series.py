@@ -1,4 +1,4 @@
-from utils.number_theory import triangle_number
+from utils.number_theory import triangle_number, pentagonal_number
 
 
 def fibonacci():
@@ -13,6 +13,13 @@ def triangle_numbers():
     n = 2
     while True:
         yield triangle_number(n)
+        n += 1
+
+
+def pentagonal_numbers():
+    n = 1
+    while True:
+        yield pentagonal_number(n)
         n += 1
 
 

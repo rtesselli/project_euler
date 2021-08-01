@@ -84,7 +84,16 @@ def sieve_of_atkin(limit):
 
 
 def triangle_number(n):
-    return n * (n - 1) / 2
+    return n * (n - 1) // 2
+
+
+def pentagonal_number(n):
+    return n * (3 * n - 1) // 2
+
+
+def is_pentagonal_number(n):
+    check = (math.sqrt(24 * n + 1) + 1) / 6
+    return check == round(check)
 
 
 def prime_decomp(n):
