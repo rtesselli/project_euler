@@ -96,6 +96,11 @@ def is_pentagonal_number(n):
     return check == round(check)
 
 
+def is_hexagonal_number(n):
+    check = (math.sqrt(8 * n + 1) + 1) / 4
+    return check == round(check)
+
+
 def prime_decomp(n):
     exponents = defaultdict(int)
     while n != 1:
