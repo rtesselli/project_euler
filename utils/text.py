@@ -17,3 +17,7 @@ def to_bin(n):
 
 def count_digits(n):
     return Counter(str(n))
+
+
+def sum_digits(digits):
+    return sum(int(digit) for digit in str(digits))
