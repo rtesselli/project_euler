@@ -1,6 +1,7 @@
 import pydoc
 import argparse
 import time
+import importlib
 
 
 def parse_args():
@@ -11,7 +12,8 @@ def parse_args():
 
 def main():
     args = parse_args()
-    fn = pydoc.locate(f"solutions.problem{args.id}")
+    importlib.import_module(f"solutions.problem{args.id}")
+    fn = pydoc.locate(f"solutions.problem{args.id}.problem{args.id}")
     start_time = time.time()
     result = fn()
     end_time = time.time() - start_time
