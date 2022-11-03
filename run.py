@@ -12,8 +12,9 @@ def parse_args():
 
 def main():
     args = parse_args()
-    importlib.import_module(f"solutions.problem{args.id}")
-    fn = pydoc.locate(f"solutions.problem{args.id}.problem{args.id}")
+    number = f"{int(args.id):0>3d}"
+    importlib.import_module(f"solutions.problem{number}")
+    fn = pydoc.locate(f"solutions.problem{number}.problem{args.id}")
     start_time = time.time()
     result = fn()
     end_time = time.time() - start_time
