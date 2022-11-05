@@ -3,3 +3,4 @@ sympy==1.11.1
 pandas==1.5.1
 inflect==6.0.2
 tqdm==4.64.1
+more-itertools==9.0.0
