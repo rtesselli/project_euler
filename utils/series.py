@@ -29,3 +29,10 @@ def pythagorean_triplet(n):
             k = n - i - j
             if i * i + j * j == k * k:
                 yield i, j, k
+
+
+def squares():
+    n = 0
+    while True:
+        yield n ** 2
+        n += 1
