@@ -5,7 +5,6 @@ def problem50():
     limit = 1000000
     primes = nt.sieve_of_atkin(limit)
     primes_set = set(primes)
-    print("Done sieve")
     max_terms = 0
     best_value = 0
     for idx, start in enumerate(primes):
