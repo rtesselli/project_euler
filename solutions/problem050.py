@@ -9,13 +9,20 @@ def compute_sums(primes: np.array) -> np.array:
 
 
 def unravel(matrix: np.array) -> np.array:
+    # flat = matrix.ravel()
+    # print("  Done ravel")
+    # indexes = np.arange(len(flat))
+    # print("  Done indexes")
+    # lengths = indexes % matrix.shape[0] - indexes // matrix.shape[0] + 1
+    # print("  Done lengths")
+    # return np.vstack((flat, lengths)).T
     span = np.arange(matrix.shape[0])
     diffs = span - span.reshape(-1, 1) + 1
     return np.vstack((matrix.ravel(), diffs.ravel())).T
 
 
 def problem50():
-    limit = 1000000
+    limit = 100000
     primes = np.array(nt.sieve_of_atkin(limit))
     print("Done sieve")
     sums = compute_sums(primes)
