@@ -1,5 +1,6 @@
 from utils.text import is_palindrome
 
+
 def is_lychrel(n: int) -> bool:
     for _ in range(50):
         n_reversed = int(str(n)[::-1])
@@ -13,6 +14,7 @@ def is_lychrel(n: int) -> bool:
 def problem55():
     lychrels = [n for n in range(1, 10000) if is_lychrel(n)]
     return len(lychrels)
+
 
 if __name__ == '__main__':
     print(is_lychrel(4994))
